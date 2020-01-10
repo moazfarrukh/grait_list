@@ -1,0 +1,26 @@
+{% extends "index.html" %} 
+{%load static%}
+
+{% block content %} 
+{%for post in posts%}
+<link rel="stylesheet" href="{% static 'my_app/css/style.css' %}">
+<div class="row">
+
+    <div class="col s4">
+        <div class="card">
+            <div class="card-image">
+                <a href='{{post.2}}'><img src="{{post.3}}"></a>
+
+            </div>
+            <div class="card-content">
+                <p>{{post.0}}</p>
+            </div>
+            <div class="card-action">
+                <a href="{{post.2}}">{{post.1}}</a>
+            </div>
+        </div>
+    </div>
+
+    {%endfor%}
+</div>
+{% endblock content%}
